@@ -13,9 +13,9 @@ uint32_t readFile(FILE *fs){
 
 int main(int argc, char *argv[]){
 	FILE *fs1 = fopen(argv[1],"rb");
-	uint32_t result[3];
+	uint32_t result[argc-1];
 	
-	for(int i=1; i<=3;i++){
+	for(int i=1; i<argc;i++){
 		FILE *fs1 = fopen(argv[i],"rb");
 		if(fs1==NULL){
 			printf("File Read Error");
